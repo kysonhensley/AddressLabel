@@ -43,20 +43,20 @@
             // 
             // ExitButton
             // 
-            ExitButton.Location = new Point(308, 245);
+            ExitButton.Location = new Point(399, 233);
             ExitButton.Name = "ExitButton";
-            ExitButton.Size = new Size(114, 82);
-            ExitButton.TabIndex = 0;
+            ExitButton.Size = new Size(143, 94);
+            ExitButton.TabIndex = 5;
             ExitButton.Text = "Exit";
             ExitButton.UseVisualStyleBackColor = true;
             ExitButton.Click += ExitButton_Click;
             // 
             // SubmitButton
             // 
-            SubmitButton.Location = new Point(428, 245);
+            SubmitButton.Location = new Point(254, 233);
             SubmitButton.Name = "SubmitButton";
-            SubmitButton.Size = new Size(114, 82);
-            SubmitButton.TabIndex = 1;
+            SubmitButton.Size = new Size(139, 94);
+            SubmitButton.TabIndex = 4;
             SubmitButton.Text = "Submit";
             SubmitButton.UseVisualStyleBackColor = true;
             SubmitButton.Click += SubmitButton_Click;
@@ -75,14 +75,14 @@
             FirstNameTextBox.Location = new Point(109, 58);
             FirstNameTextBox.Name = "FirstNameTextBox";
             FirstNameTextBox.Size = new Size(125, 27);
-            FirstNameTextBox.TabIndex = 3;
+            FirstNameTextBox.TabIndex = 0;
             // 
             // PhoneTextBox
             // 
             PhoneTextBox.Location = new Point(109, 157);
             PhoneTextBox.Name = "PhoneTextBox";
             PhoneTextBox.Size = new Size(125, 27);
-            PhoneTextBox.TabIndex = 5;
+            PhoneTextBox.TabIndex = 3;
             // 
             // PhoneLabel
             // 
@@ -98,7 +98,7 @@
             AgeTextBox.Location = new Point(109, 124);
             AgeTextBox.Name = "AgeTextBox";
             AgeTextBox.Size = new Size(125, 27);
-            AgeTextBox.TabIndex = 7;
+            AgeTextBox.TabIndex = 2;
             // 
             // AgeLabel
             // 
@@ -114,7 +114,7 @@
             LastNameTextBox.Location = new Point(109, 91);
             LastNameTextBox.Name = "LastNameTextBox";
             LastNameTextBox.Size = new Size(125, 27);
-            LastNameTextBox.TabIndex = 9;
+            LastNameTextBox.TabIndex = 1;
             // 
             // LastNameLabel
             // 
@@ -127,6 +127,8 @@
             // 
             // DisplayLabel
             // 
+            DisplayLabel.BorderStyle = BorderStyle.Fixed3D;
+            DisplayLabel.FlatStyle = FlatStyle.System;
             DisplayLabel.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             DisplayLabel.Location = new Point(240, 58);
             DisplayLabel.Name = "DisplayLabel";
