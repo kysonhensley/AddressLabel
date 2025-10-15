@@ -50,6 +50,10 @@ namespace AddressLabel
             }
         }
 
+        static void EvaluateField()
+        {
+            
+        }
         static void DisplayContent(string text)
         {
             
