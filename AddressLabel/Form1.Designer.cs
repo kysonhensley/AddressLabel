@@ -137,8 +137,10 @@
             // 
             // Form1
             // 
+            AcceptButton = SubmitButton;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            CancelButton = ExitButton;
             ClientSize = new Size(554, 339);
             Controls.Add(DisplayLabel);
             Controls.Add(LastNameTextBox);
