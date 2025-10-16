@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace AddressLabel
 {
     public partial class Form1 : Form
@@ -14,6 +16,11 @@ namespace AddressLabel
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
+            DisplayContent();
+        }
+
+        string EvaluateFields()
+        {
             string message = "";
 
             if (PhoneTextBox.Text == "")
@@ -22,6 +29,18 @@ namespace AddressLabel
                 message += "Phone number is required.\n";
             }
 
+            //validates that field is not empty and is a number
+            try
+            {
+                int.Parse(AgeTextBox.Text);
+            }
+            catch (Exception)
+            {
+                AgeTextBox.Focus();
+                message += "Valid Age is required.\n";
+            }
+
+            //Only Verifies that field is not empty
             if (AgeTextBox.Text == "")
             {
                 AgeTextBox.Focus();
@@ -48,15 +67,21 @@ namespace AddressLabel
             {
                 DisplayLabel.Text = ($"{FirstNameTextBox.Text} {LastNameTextBox.Text}\nAge: {AgeTextBox.Text}\nPhone: {PhoneTextBox.Text}");
             }
+
+            return message;
+        }
+        void DisplayContent()
+        {
+            if (EvaluateFields() != "")
+            {
+                MessageBox.Show(EvaluateFields());
+            }
+            else
+            {
+                DisplayLabel.Text = ($"{FirstNameTextBox.Text} {LastNameTextBox.Text}\nAge: {AgeTextBox.Text}\nPhone: {PhoneTextBox.Text}");
+            }
         }
 
-        static void EvaluateField()
-        {
-            
-        }
-        static void DisplayContent(string text)
-        {
-            
-        }
+        
     }
 }
