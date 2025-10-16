@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             ExitButton = new Button();
             SubmitButton = new Button();
             FirstNameLabel = new Label();
@@ -39,6 +40,8 @@
             LastNameTextBox = new TextBox();
             LastNameLabel = new Label();
             DisplayLabel = new Label();
+            toolTip1 = new ToolTip(components);
+            ToolTip = new ToolStrip();
             SuspendLayout();
             // 
             // ExitButton
@@ -48,6 +51,7 @@
             ExitButton.Size = new Size(143, 94);
             ExitButton.TabIndex = 5;
             ExitButton.Text = "E&xit";
+            toolTip1.SetToolTip(ExitButton, "Close Program\r\nESC\r\nALT + x");
             ExitButton.UseVisualStyleBackColor = true;
             ExitButton.Click += ExitButton_Click;
             // 
@@ -58,6 +62,7 @@
             SubmitButton.Size = new Size(139, 94);
             SubmitButton.TabIndex = 4;
             SubmitButton.Text = "&Submit";
+            toolTip1.SetToolTip(SubmitButton, "Display Label\r\nEnter\r\nAlt + s");
             SubmitButton.UseVisualStyleBackColor = true;
             SubmitButton.Click += SubmitButton_Click;
             // 
@@ -69,6 +74,7 @@
             FirstNameLabel.Size = new Size(80, 20);
             FirstNameLabel.TabIndex = 2;
             FirstNameLabel.Text = "First Name";
+            toolTip1.SetToolTip(FirstNameLabel, "First Name");
             // 
             // FirstNameTextBox
             // 
@@ -92,6 +98,7 @@
             PhoneLabel.Size = new Size(50, 20);
             PhoneLabel.TabIndex = 4;
             PhoneLabel.Text = "Phone";
+            toolTip1.SetToolTip(PhoneLabel, "Phone Number is required");
             // 
             // AgeTextBox
             // 
@@ -108,6 +115,7 @@
             AgeLabel.Size = new Size(36, 20);
             AgeLabel.TabIndex = 6;
             AgeLabel.Text = "Age";
+            toolTip1.SetToolTip(AgeLabel, "Age\r\nMust be a number");
             // 
             // LastNameTextBox
             // 
@@ -124,6 +132,7 @@
             LastNameLabel.Size = new Size(79, 20);
             LastNameLabel.TabIndex = 8;
             LastNameLabel.Text = "Last Name";
+            toolTip1.SetToolTip(LastNameLabel, "Last Name");
             // 
             // DisplayLabel
             // 
@@ -134,6 +143,16 @@
             DisplayLabel.Name = "DisplayLabel";
             DisplayLabel.Size = new Size(302, 126);
             DisplayLabel.TabIndex = 10;
+            toolTip1.SetToolTip(DisplayLabel, "Final Result Label");
+            // 
+            // ToolTip
+            // 
+            ToolTip.ImageScalingSize = new Size(20, 20);
+            ToolTip.Location = new Point(0, 0);
+            ToolTip.Name = "ToolTip";
+            ToolTip.Size = new Size(554, 25);
+            ToolTip.TabIndex = 11;
+            ToolTip.Text = "toolStrip1";
             // 
             // Form1
             // 
@@ -142,6 +161,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = ExitButton;
             ClientSize = new Size(554, 339);
+            Controls.Add(ToolTip);
             Controls.Add(DisplayLabel);
             Controls.Add(LastNameTextBox);
             Controls.Add(LastNameLabel);
@@ -155,6 +175,7 @@
             Controls.Add(ExitButton);
             Name = "Form1";
             Text = "Form1";
+            toolTip1.SetToolTip(this, "Close Form\r\nESC\r\nAlt + x\r\n");
             ResumeLayout(false);
             PerformLayout();
         }
@@ -172,5 +193,7 @@
         private TextBox LastNameTextBox;
         private Label LastNameLabel;
         private Label DisplayLabel;
+        private ToolTip toolTip1;
+        private ToolStrip ToolTip;
     }
 }
