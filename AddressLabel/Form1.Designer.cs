@@ -47,7 +47,7 @@
             ExitButton.Name = "ExitButton";
             ExitButton.Size = new Size(143, 94);
             ExitButton.TabIndex = 5;
-            ExitButton.Text = "Exit";
+            ExitButton.Text = "E&xit";
             ExitButton.UseVisualStyleBackColor = true;
             ExitButton.Click += ExitButton_Click;
             // 
@@ -57,7 +57,7 @@
             SubmitButton.Name = "SubmitButton";
             SubmitButton.Size = new Size(139, 94);
             SubmitButton.TabIndex = 4;
-            SubmitButton.Text = "Submit";
+            SubmitButton.Text = "&Submit";
             SubmitButton.UseVisualStyleBackColor = true;
             SubmitButton.Click += SubmitButton_Click;
             // 
