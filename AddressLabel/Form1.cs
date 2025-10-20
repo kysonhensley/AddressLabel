@@ -1,3 +1,9 @@
+//Kyson Hensley
+//RCET2265
+//Fall 2025
+//AddressLabel Program
+//https://github.com/kysonhensley/AddressLabel.git
+
 using System.Windows.Forms;
 
 namespace AddressLabel
