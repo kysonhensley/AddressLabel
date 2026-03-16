@@ -23,7 +23,7 @@ namespace AddressLabel
 
             if(FirstNameTextBox.Text == "")
             {
-                FirstNameTextBox.BackColor = Color.Red;
+                FirstNameTextBox.Focus();
                 message += "First name is required.\n";
             }
             
