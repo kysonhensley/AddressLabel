@@ -12,6 +12,9 @@ namespace AddressLabel
             this.Close();
         }
 
+        private void DisplayLabelButton_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
