@@ -1,3 +1,9 @@
+//Kyson Hensley
+//RCET2265
+//Spring 2026
+//AddressLabel Program
+//https://github.com/kysonhensley/AddressLabel.git
+
 namespace AddressLabel
 {
     public partial class AddressLabelForm : Form
