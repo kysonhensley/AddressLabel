@@ -75,7 +75,6 @@
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(100, 23);
             textBox6.TabIndex = 11;
-            textBox6.Text = "Zip Code";
             // 
             // ZipCodeLabel
             // 

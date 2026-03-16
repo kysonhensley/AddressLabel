@@ -16,5 +16,18 @@ namespace AddressLabel
         {
 
         }
+
+        string EvaluateUserInput()
+        {
+            string message = "";
+
+            if(FirstNameTextBox.Text == "")
+            {
+                FirstNameTextBox.BackColor = Color.Red;
+                message += "First name is required.\n";
+            }
+            
+            return message;
+        }
     }
 }
