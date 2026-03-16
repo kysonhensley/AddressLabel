@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             MailingAddressGroupBox = new GroupBox();
-            textBox6 = new TextBox();
+            ZipCodeTextBox = new TextBox();
             ZipCodeLabel = new Label();
             StateTextBox = new TextBox();
             StateLabel = new Label();
@@ -50,7 +50,7 @@
             // 
             // MailingAddressGroupBox
             // 
-            MailingAddressGroupBox.Controls.Add(textBox6);
+            MailingAddressGroupBox.Controls.Add(ZipCodeTextBox);
             MailingAddressGroupBox.Controls.Add(ZipCodeLabel);
             MailingAddressGroupBox.Controls.Add(StateTextBox);
             MailingAddressGroupBox.Controls.Add(StateLabel);
@@ -69,12 +69,12 @@
             MailingAddressGroupBox.TabStop = false;
             MailingAddressGroupBox.Text = "Mailing Address";
             // 
-            // textBox6
+            // ZipCodeTextBox
             // 
-            textBox6.Location = new Point(19, 361);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(100, 23);
-            textBox6.TabIndex = 11;
+            ZipCodeTextBox.Location = new Point(19, 361);
+            ZipCodeTextBox.Name = "ZipCodeTextBox";
+            ZipCodeTextBox.Size = new Size(100, 23);
+            ZipCodeTextBox.TabIndex = 11;
             // 
             // ZipCodeLabel
             // 
@@ -227,7 +227,7 @@
         private Button DisplayLabelButton;
         private Button ClearButton;
         private Button ExitButton;
-        private TextBox textBox6;
+        private TextBox ZipCodeTextBox;
         private Label ZipCodeLabel;
         private TextBox StateTextBox;
         private Label StateLabel;
