@@ -14,7 +14,7 @@ namespace AddressLabel
 
         private void DisplayLabelButton_Click(object sender, EventArgs e)
         {
-
+            DisplayLabel();
         }
 
         string EvaluateUserInput()
@@ -26,7 +26,7 @@ namespace AddressLabel
                 FirstNameTextBox.Focus();
                 message += "First name is required.\n";
             }
-            
+
             if (LastNameTextBox.Text == "")
             {
                 LastNameTextBox.Focus();
@@ -44,13 +44,13 @@ namespace AddressLabel
                 CityTextBox.Focus();
                 message += "City is required.\n";
             }
-            
+
             if (StateTextBox.Text == "")
             {
                 StateTextBox.Focus();
                 message += "State is required.\n";
             }
-            
+
             if (ZipCodeTextBox.Text == "")
             {
                 ZipCodeTextBox.Focus();
@@ -72,11 +72,39 @@ namespace AddressLabel
                 MessageBox.Show(message);
             }
             else
-            { 
-                AddressLabelGroupBox.Text = $"{FirstNameTextBox.Text} {LastNameTextBox.Text}\n{StreetAddressTextBox.Text}\n{CityTextBox.Text}, {StateTextBox.Text} {ZipCodeTextBox.Text}";
+            {
+                DisplayAddressLabel.Text = $"{FirstNameTextBox.Text} {LastNameTextBox.Text}\n{StreetAddressTextBox.Text}\n{CityTextBox.Text}, {StateTextBox.Text} {ZipCodeTextBox.Text}";
             }
 
             return message;
+        }
+
+        void DisplayLabel()
+        {
+            if (EvaluateUserInput() != "")
+            {
+                MessageBox.Show(EvaluateUserInput());
+            }
+            else
+            {
+                DisplayAddressLabel.Text = $"{FirstNameTextBox.Text} {LastNameTextBox.Text}\n{StreetAddressTextBox.Text}\n{CityTextBox.Text}, {StateTextBox.Text} {ZipCodeTextBox.Text}";
+            }
+        }
+
+        private void SetDefualuts()
+        {
+            FirstNameTextBox.Text = "";
+            LastNameTextBox.Text = "";
+            StreetAddressTextBox.Text = "";
+            CityTextBox.Text = "";
+            StateTextBox.Text = "";
+            ZipCodeTextBox.Text = "";
+            DisplayAddressLabel.Text = "";
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            SetDefualuts();
         }
     }
 }

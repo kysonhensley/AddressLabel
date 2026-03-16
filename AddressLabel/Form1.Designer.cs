@@ -42,10 +42,12 @@
             FirstNameTextBox = new TextBox();
             FirstNameLabel = new Label();
             AddressLabelGroupBox = new GroupBox();
+            DisplayAddressLabel = new Label();
             DisplayLabelButton = new Button();
             ClearButton = new Button();
             ExitButton = new Button();
             MailingAddressGroupBox.SuspendLayout();
+            AddressLabelGroupBox.SuspendLayout();
             SuspendLayout();
             // 
             // MailingAddressGroupBox
@@ -74,7 +76,7 @@
             ZipCodeTextBox.Location = new Point(19, 361);
             ZipCodeTextBox.Name = "ZipCodeTextBox";
             ZipCodeTextBox.Size = new Size(100, 23);
-            ZipCodeTextBox.TabIndex = 11;
+            ZipCodeTextBox.TabIndex = 6;
             // 
             // ZipCodeLabel
             // 
@@ -90,7 +92,7 @@
             StateTextBox.Location = new Point(19, 299);
             StateTextBox.Name = "StateTextBox";
             StateTextBox.Size = new Size(100, 23);
-            StateTextBox.TabIndex = 9;
+            StateTextBox.TabIndex = 5;
             // 
             // StateLabel
             // 
@@ -106,7 +108,7 @@
             CityTextBox.Location = new Point(19, 235);
             CityTextBox.Name = "CityTextBox";
             CityTextBox.Size = new Size(100, 23);
-            CityTextBox.TabIndex = 7;
+            CityTextBox.TabIndex = 4;
             // 
             // CityLabel
             // 
@@ -122,7 +124,7 @@
             StreetAddressTextBox.Location = new Point(19, 174);
             StreetAddressTextBox.Name = "StreetAddressTextBox";
             StreetAddressTextBox.Size = new Size(100, 23);
-            StreetAddressTextBox.TabIndex = 5;
+            StreetAddressTextBox.TabIndex = 3;
             // 
             // StreetAddressLabel
             // 
@@ -138,7 +140,7 @@
             LastNameTextBox.Location = new Point(19, 114);
             LastNameTextBox.Name = "LastNameTextBox";
             LastNameTextBox.Size = new Size(100, 23);
-            LastNameTextBox.TabIndex = 3;
+            LastNameTextBox.TabIndex = 2;
             // 
             // LastNameLabel
             // 
@@ -167,6 +169,7 @@
             // 
             // AddressLabelGroupBox
             // 
+            AddressLabelGroupBox.Controls.Add(DisplayAddressLabel);
             AddressLabelGroupBox.Location = new Point(391, 12);
             AddressLabelGroupBox.Name = "AddressLabelGroupBox";
             AddressLabelGroupBox.Size = new Size(397, 370);
@@ -174,12 +177,20 @@
             AddressLabelGroupBox.TabStop = false;
             AddressLabelGroupBox.Text = "AddressLabel";
             // 
+            // DisplayAddressLabel
+            // 
+            DisplayAddressLabel.AutoSize = true;
+            DisplayAddressLabel.Location = new Point(24, 38);
+            DisplayAddressLabel.Name = "DisplayAddressLabel";
+            DisplayAddressLabel.Size = new Size(0, 15);
+            DisplayAddressLabel.TabIndex = 0;
+            // 
             // DisplayLabelButton
             // 
             DisplayLabelButton.Location = new Point(391, 388);
             DisplayLabelButton.Name = "DisplayLabelButton";
             DisplayLabelButton.Size = new Size(133, 50);
-            DisplayLabelButton.TabIndex = 0;
+            DisplayLabelButton.TabIndex = 7;
             DisplayLabelButton.Text = "&Display Label";
             DisplayLabelButton.UseVisualStyleBackColor = true;
             DisplayLabelButton.Click += DisplayLabelButton_Click;
@@ -189,16 +200,17 @@
             ClearButton.Location = new Point(530, 388);
             ClearButton.Name = "ClearButton";
             ClearButton.Size = new Size(126, 50);
-            ClearButton.TabIndex = 1;
+            ClearButton.TabIndex = 8;
             ClearButton.Text = "&Clear";
             ClearButton.UseVisualStyleBackColor = true;
+            ClearButton.Click += ClearButton_Click;
             // 
             // ExitButton
             // 
             ExitButton.Location = new Point(662, 388);
             ExitButton.Name = "ExitButton";
             ExitButton.Size = new Size(126, 50);
-            ExitButton.TabIndex = 2;
+            ExitButton.TabIndex = 9;
             ExitButton.Text = "&Exit";
             ExitButton.UseVisualStyleBackColor = true;
             ExitButton.Click += ExitButton_Click;
@@ -217,6 +229,8 @@
             Text = "Address Label Viewer";
             MailingAddressGroupBox.ResumeLayout(false);
             MailingAddressGroupBox.PerformLayout();
+            AddressLabelGroupBox.ResumeLayout(false);
+            AddressLabelGroupBox.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -239,5 +253,6 @@
         private Label LastNameLabel;
         private TextBox FirstNameTextBox;
         private Label FirstNameLabel;
+        private Label DisplayAddressLabel;
     }
 }
