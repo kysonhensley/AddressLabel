@@ -1,8 +1,8 @@
 namespace AddressLabel
 {
-    public partial class Form1 : Form
+    public partial class AddressLabelForm : Form
     {
-        public Form1()
+        public AddressLabelForm()
         {
             InitializeComponent();
         }
